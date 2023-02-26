@@ -7,6 +7,6 @@ RUN mvn install
 
 FROM arm64v8/eclipse-temurin:17
 
-COPY --from=build target/hello-1.0-SNAPSHOT.jar ./app.jar
+COPY --from=build target/parakeet-1.0-SNAPSHOT.jar ./app.jar
 
 ENTRYPOINT ["java","-jar","./app.jar"]
