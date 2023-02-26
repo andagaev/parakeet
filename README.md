@@ -1,1 +1,1 @@
-Feede parakeet
+Feed parakeet
