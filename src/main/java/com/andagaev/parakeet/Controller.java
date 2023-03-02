@@ -20,13 +20,12 @@ public class Controller {
     public Response decimalToOctal(@RequestBody Request request) {
         int decimal = request.getNumber();
         int result = 0;
-        if (decimal <= 0){
+        if (decimal <= 0) {
             return new Response(result);
         }
         int countval = 1;
 
         while (decimal != 0) {
-
             int remainder = decimal % 8;
 
             result += remainder * countval;
