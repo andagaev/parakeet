@@ -1,4 +1,4 @@
-package com.andagaev.parakeet;
+package com.andagaev.parakeet.api;
 
 public class Response {
     private int result;
