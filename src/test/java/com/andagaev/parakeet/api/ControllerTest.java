@@ -62,4 +62,19 @@ public class ControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json(objectMapper.writeValueAsString(responseData)));
     }
+
+    @Test
+    public void octalToDecimal() throws Exception {
+        Request requestData = new Request(100);
+        Response responseData = new Response(64);
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/octal-to-decimal")
+                .accept(MediaType.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(requestData));
+
+        mvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(responseData)));
+    }
 }
