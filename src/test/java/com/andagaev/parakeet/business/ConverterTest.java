@@ -27,4 +27,25 @@ public class ConverterTest {
         Assertions.assertEquals(144, result);
     }
 
+    @Test
+    public void octalToDecimal_numberLessThan0_True() {
+        int result = Converter.octalToDecimal(-5);
+
+        Assertions.assertEquals(0, result);
+    }
+
+    @Test
+    public void octalToDecimal_numberEquals0_True() {
+        int result = Converter.octalToDecimal(0);
+
+        Assertions.assertEquals(0, result);
+    }
+
+    @Test
+    public void octalToDecimal_numberGreaterThan0_True() {
+        int result = Converter.octalToDecimal(100);
+
+        Assertions.assertEquals(64, result);
+    }
+
 }

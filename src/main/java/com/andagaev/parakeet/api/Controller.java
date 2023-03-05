@@ -1,7 +1,6 @@
 package com.andagaev.parakeet.api;
 
 import com.andagaev.parakeet.business.Converter;
-import com.andagaev.parakeet.business.ConverterToDecimal;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -27,7 +26,7 @@ public class Controller {
     @PostMapping("/octal-to-decimal")
     @ResponseBody
     public Response octalToDecimal(@RequestBody Request request) {
-        int result = ConverterToDecimal.octalToDecimal(request.getNumber());
+        int result = Converter.octalToDecimal(request.getNumber());
 
         return new Response(result);
     }
