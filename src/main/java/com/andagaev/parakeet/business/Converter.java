@@ -30,6 +30,12 @@ public class Converter {
         return result;
     }
 
+    /**
+     * Converts octal number to decimal
+     *
+     * @param number Octal number
+     * @return Decimal number
+     */
     public static int octalToDecimal(int number) {
         int result = 0;
         if (number <= 0) {
