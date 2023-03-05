@@ -23,6 +23,13 @@ public class Controller {
 
         return new Response(result);
     }
+    @PostMapping("/octal-to-decimal")
+    @ResponseBody
+    public Response octalToDecimal(@RequestBody Request request) {
+        int result = Converter.octalToDecimal(request.getNumber());
+
+        return new Response(result);
+    }
 }
 
 
